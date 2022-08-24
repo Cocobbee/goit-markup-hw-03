@@ -1,15 +1,26 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 :root {
     --main-text-color: #212121;
-    --main-background-color: #F5F5F5;
-    --sky: #2196F3;
-    --logo-black: #000000;
     --text-grey: #757575;
-    --motto-back-color: #2F303A;
+
+    --main-background-color: #F5F5F5;
     --regular-white: #FFFFFF;
+
+    --sky: #2196F3;
+    --dark-sky: #077cdd;
+    --logo-black: #000000;
+    --motto-back-color: #2F303A;
+
+    --border-frame: #EEEEEE;
+}
+
+/*global styles*/
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    background-color: var(--regular-white);
 }
 
 /*header styling*/
@@ -27,7 +38,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19em;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--sky);
 }
@@ -37,7 +48,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19em;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--logo-black);
 }
@@ -47,10 +58,11 @@ body {
     list-style: none;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14em;
+    line-height: 1.14;
     letter-spacing: 0.02em;
 }
 
+.link-studio,
 .link-portfolio,
 .link-contacts {
     text-decoration: none;
@@ -66,9 +78,14 @@ body {
     color: var(--sky);
 }
 
-.link-studio {
+.link-studio.current {
     text-decoration: none;
     color: var(--sky);
+}
+
+.link-portfolio.current {
+    text-decoration: none;
+    color: var(--sky)
 }
 
 /*contacts header styling*/
@@ -76,7 +93,7 @@ body {
     list-style: none;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14em;
+    line-height: 1.14;
     letter-spacing: 0.02em;
 }
 
@@ -105,7 +122,7 @@ body {
 .tittle {
     font-weight: 900;
     font-size: 44px;
-    line-height: 1.36em;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -117,7 +134,7 @@ body {
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87em;
+    line-height: 1.87;
     display: flex;
     align-items: center;
     text-align: center;
@@ -129,9 +146,28 @@ body {
     border: none;
 }
 
+.main-button:hover {
+    color: var(--regular-white);
+    background: var(--dark-sky);
+}
+
+.main-button:focus {
+    color: var(--regular-white);
+    background: var(--dark-sky);
+}
+
 /*section 2 features*/
 .visually-hidden {
-    display: none
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .features-list {
@@ -141,7 +177,7 @@ body {
 .features-tittle {
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14em;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-text-color);
@@ -149,7 +185,7 @@ body {
 
 .features-text {
     font-size: 14px;
-    line-height: 1.71em;
+    line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-grey);
 }
@@ -158,7 +194,7 @@ body {
 .todo-tittle {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.16em;
+    line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
@@ -178,20 +214,23 @@ body {
     background-color: var(--regular-white)
 }
 
+.team-section {
+    background-color: var(--main-background-color);
+}
+
 .team-section-tittle {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.16em;
+    line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
-    background-color: var(--main-background-color)
 }
 
 .team-tittle {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.18em;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
@@ -199,8 +238,102 @@ body {
 
 .team-text {
     font-size: 16px;
-    line-height: 1.18em;
+    line-height: 1.18;
     text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-grey);
+}
+
+/*section portfolio*/
+.section-portfolio {
+    background-color: var(--regular-white);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/*buttons list*/
+.portfolio-btn-list {
+    list-style: none;
+}
+
+.button-portfolio {
+    cursor: pointer;
+    background: var(--sky);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--regular-white);
+}
+
+.button-portfolio:hover .button-portfolio:focus {
+    background: var(--sky);
+    color: var(--regular-white)
+}
+
+.button-secondary {
+    cursor: pointer;
+    background: var(--main-background-color);
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+    background: var(--sky);
+    color: var(--regular-white);
+}
+
+/*examples list*/
+.portfolio-list {
+    list-style: none;
+}
+
+.portfolio-item {
+    box-sizing: border-box;
+    background: var(--regular-white);
+    border: 1px solid var(--border-frame);
+}
+
+.portfolio-link {
+    text-decoration: none;
+    background-color: var(--main-background-color);
+}
+
+.portfolio-tittle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color);
+}
+
+.portfolio-text {
+    font-size: 16px;
+    line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--text-grey);
 }
@@ -220,7 +353,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19em;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--sky);
 }
@@ -230,7 +363,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.19em;
+    line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--regular-white);
 }
@@ -244,7 +377,7 @@ body {
     list-style: none;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.85em;
+    line-height: 1.85;
     letter-spacing: 0.03em;
 }
 
