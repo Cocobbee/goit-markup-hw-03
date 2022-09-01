@@ -2,7 +2,7 @@
     --main-text-color: #212121;
     --text-grey: #757575;
 
-    --main-background-color: #F5F5F5;
+    --main-background-color: #F5F4FA;
     --regular-white: #FFFFFF;
 
     --sky: #2196F3;
@@ -23,14 +23,51 @@ body {
     background-color: var(--regular-white);
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 /*header styling*/
 .header-webstudio {
     background: var(--regular-white);
 }
 
 /*logo styling*/
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
 .header-webstudio-link {
     text-decoration: none;
+    margin-left: 215px;
+    outline: 2px solid tomato;
 }
 
 .logo-web-header {
@@ -55,6 +92,12 @@ body {
 
 /*link list decoration*/
 .linklist-header {
+    display: flex;
+    margin-left: 93px;
+    margin-right: 0px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+
     list-style: none;
     font-weight: 500;
     font-size: 14px;
@@ -62,9 +105,14 @@ body {
     letter-spacing: 0.02em;
 }
 
+.linklist-header li+li {
+    margin-left: 50px;
+}
+
 .link-studio,
 .link-portfolio,
 .link-contacts {
+    display: block;
     text-decoration: none;
     color: var(--main-text-color);
 }
@@ -90,6 +138,9 @@ body {
 
 /*contacts header styling*/
 .contacts-header {
+    display: flex;
+    margin-left: auto;    
+
     list-style: none;
     font-weight: 500;
     font-size: 14px;
@@ -97,8 +148,13 @@ body {
     letter-spacing: 0.02em;
 }
 
+.contacts-header li+li {
+    margin-left: 50px;
+}
+
 .tel-link-header,
 .mail-link-header {
+    display: block;
     text-decoration: none;
     color: var(--text-grey);
 }
@@ -110,32 +166,42 @@ body {
     color: var(--sky);
 }
 
-.main-info {
-    background: var(--main-background-color);
-}
-
 /*section 1 motto*/
 .motto-section {
+    text-align: center;
+    height: 600px;
+    width: 1600px;
+
     background-color: var(--motto-back-color);
 }
 
 .tittle {
+    width: 696px;
+    margin-left: 452px;
+    margin-top: 100px;
+    
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--regular-white);
 }
 
 .main-button {
+    display: inline-flex;
+    width: 216px;
+    margin-top: 30px;
+    padding-left: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
     font-family: inherit;
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -172,6 +238,17 @@ body {
 
 .features-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-item {
+margin-left: auto;
+    width: 270px;
+}
+
+.features-list li + li {
+    margin-left: 30px;
 }
 
 .features-tittle {
@@ -183,7 +260,9 @@ body {
     color: var(--main-text-color);
 }
 
+
 .features-text {
+    margin-top: 10px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -191,6 +270,7 @@ body {
 }
 
 /*section 3 things to do*/
+
 .todo-tittle {
     font-weight: 700;
     font-size: 36px;
@@ -202,6 +282,8 @@ body {
 
 .todo-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*section 4 team*/
@@ -247,19 +329,6 @@ body {
 /*section portfolio*/
 .section-portfolio {
     background-color: var(--regular-white);
-}
-
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
 }
 
 /*buttons list*/
