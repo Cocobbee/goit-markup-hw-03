@@ -372,7 +372,6 @@ img {
 
 .portfolio-link {
     display: block;
-    background-color: var(--main-background-color);
 }
 
 .portfolio-link:hover, .portfolio-link:focus {
